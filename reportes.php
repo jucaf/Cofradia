@@ -1,3 +1,11 @@
+<?php
+include 'datalogin.php';
+$sql1="SELECT tramo FROM Cargos INNER JOIN Puestos ON Cargos.cid = Puestos.cargo WHERE anno =".date('Y')." and dia=1 GROUP BY tramo  ;";
+$res1=mysql_query($sql1) or die("<br/><br/>".mysql_error());
+
+$sql2="SELECT tramo FROM Cargos INNER JOIN Puestos ON Cargos.cid = Puestos.cargo WHERE anno =".date('Y')." and dia=2 GROUP BY tramo  ;";
+$res2=mysql_query($sql2) or die("<br/><br/>".mysql_error());
+?>
 <HTML>
 <head>
 <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.7.2.custom.css">
@@ -56,13 +64,9 @@ Selecciona las fechas entre las que se desea mostrar la facturacion:
 Mostrar tramo  
 <SELECT name=tramo onchange="this.form.submit()">
 	<OPTION></OPTION>
-	<OPTION>1</OPTION>
-	<OPTION>2</OPTION>
-	<OPTION>3</OPTION>
-	<OPTION>4</OPTION>
-	<OPTION>5</OPTION>
-	<OPTION>6</OPTION>
-	<OPTION>7</OPTION>
+	<?php while ($row=mysql_fetch_array($res1)){ ?>
+	<OPTION><?=$row['tramo']?></OPTION>
+	<?}?>
 </SELECT>
 del Domingo de Ramos
 </form>
@@ -72,18 +76,19 @@ del Domingo de Ramos
 Mostrar tramo  
 <SELECT name=tramo onchange="this.form.submit()">
 	<OPTION></OPTION>
-	<OPTION>1</OPTION>
-	<OPTION>2</OPTION>
-	<OPTION>3</OPTION>
-	<OPTION>4</OPTION>
-	<OPTION>5</OPTION>
-	<OPTION>6</OPTION>
-	<OPTION>7</OPTION>
-	<OPTION>8</OPTION>
-	<OPTION>9</OPTION>
-	<OPTION>10</OPTION>
+	<?php while ($row=mysql_fetch_array($res2)){ ?>
+	<OPTION><?=$row['tramo']?></OPTION>
+	<?}?>
 </SELECT>
 del Viernes Santo
+</form>
+Pendientes de recoger:
+<form method="get" action='./reportes/reporte_pendientes.php'>
+<SELECT name=did onchange="this.form.submit()">
+	<OPTION></OPTION>
+	<OPTION value=1>DOMINGO DE RAMOS</OPTION>
+	<OPTION value=2>VIERNES SANTO</OPTION>
+</SELECT>
 </form>
 
 </body>

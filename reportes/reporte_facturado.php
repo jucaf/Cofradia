@@ -10,8 +10,8 @@ switch($_GET['range']){
 		$fin=date('Y')."-12-31";
 		break;
 	case 'custom':
-		$inicio=$_GET['inicio'];
-		$fin=$_GET['fin'];
+		$inicio=$_GET['dateIni'];
+		$fin=$_GET['dateEnd'];
 		break;	
 }
 $sql="SELECT SUM(precio) as total FROM Puestos INNER JOIN Cargos ON Puestos.cargo=Cargos.cid WHERE payDate BETWEEN '$inicio' AND '$fin' AND facturable AND hid IS NOT NULL";

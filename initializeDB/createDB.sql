@@ -141,6 +141,7 @@ CREATE TABLE `Puestos` (
   `cargo` int(11) NOT NULL,
   `creationDate` DATE DEFAULT NULL,
   `payDate` DATE DEFAULT NULL,
+  `facturable` BIT DEFAULT 1,
   PRIMARY KEY (`pid`),
   KEY `fk_Puestos_1` (`hid`),
   KEY `fk_Puestos_2` (`cargo`),
