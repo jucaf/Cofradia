@@ -214,8 +214,8 @@ INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,6,'',24,52);
 INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,6,'',24,53);
 INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,6,'',25,54);
 INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,6,'',25,55);
-INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,7,'','',56);
-INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,7,'','',57);
+INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,7,'',1,56);
+INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,7,'',2,57);
 
 -- VIERNES SANTO VIRGEN
 INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,8,'','',74);
@@ -245,7 +245,7 @@ INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,10,'',23,67);
 INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,10,'',23,68);
 INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,10,'',24,69);
 INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,10,'',24,70);
-INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,8,'','',71);
-INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,9,'','',72);
+INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,11,'',1,71);
+INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,11,'',2,72);
 
 
