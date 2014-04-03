@@ -33,16 +33,18 @@ TOTAL :<b><?=$total['total']?></b><br/>
 		<th>Precio</th>
 		<th>Fecha</th>
 	</tr>
-        <?while ($row=mysql_fetch_array($res)){?>
-	<tr>
-		<td><?=$row['nombre']?></td>
-		<td><?=$row['apellidos']?></td>
-		<td><?=$row['cargo']?></td>
-		<td><?=$row['dia']?></td>
-		<td><?=($row['facturable'] ? $row['precio'] : '0.00')?></td>
-		<td><?=$row['fecha']?></td>
-	</tr>
-	<?}?>	
+        <?php
+	$row=0;
+	while ($row=mysql_fetch_array($res)) {
+	echo "<tr>";
+	echo "	<td>".$row['nombre']."</td>";
+	echo "	<td>".$row['apellidos']."</td>";
+	echo "	<td>".$row['cargo']."</td>";
+	echo "	<td>".$row['dia']."</td>";
+	echo "	<td>".($row['facturable'] ? $row['precio'] : '0.00')."</td>";
+	echo "	<td>".$row['fecha']."</td>";
+	echo "</tr>";
+	}?>	
 </table>
 <?
 ?>

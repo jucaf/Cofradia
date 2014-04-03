@@ -13,7 +13,7 @@ $res=mysql_query($sql) or die("<br/><br/>".mysql_error());
 		<th>Tramo</th>
 		<th>Pareja</th>
 	</tr>
-        <?while ($row=mysql_fetch_array($res)){?>
+        <?php while ($row=mysql_fetch_array($res)){?>
 	<tr>
 		<td><?=$row['nombre']?></td>
 		<td><?=$row['apellidos']?></td>
@@ -22,7 +22,7 @@ $res=mysql_query($sql) or die("<br/><br/>".mysql_error());
 		<td><?=$row['tramo']?></td>
 		<td><?=$row['pareja']?></td>
 	</tr>
-	<?}?>	
+	<?php } ?>	
 </table>
 <?
 ?>

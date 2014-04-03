@@ -64,11 +64,9 @@ Selecciona las fechas entre las que se desea mostrar la facturacion:
 Mostrar tramo  
 <SELECT name=tramo onchange="this.form.submit()">
 	<OPTION></OPTION>
-	<?php 
-	while ($row=mysql_fetch_array($res1)){ 
-		echo "<OPTION>".$row['tramo']."</OPTION>";
-	}
-?>
+	<?php while ($row=mysql_fetch_array($res1)){ ?>
+	<OPTION><?php=$row['tramo']?></OPTION>
+	<?php}?>
 </SELECT>
 del Domingo de Ramos
 </form>
@@ -78,11 +76,9 @@ del Domingo de Ramos
 Mostrar tramo  
 <SELECT name=tramo onchange="this.form.submit()">
 	<OPTION></OPTION>
-	<?php 
-	while ($row=mysql_fetch_array($res2)){ 
-	echo "<OPTION>".$row['tramo']."</OPTION>";
-	}
-?>
+	<?php while ($row=mysql_fetch_array($res2)){ ?>
+	<OPTION><?=$row['tramo']?></OPTION>
+	<?php}?>
 </SELECT>
 del Viernes Santo
 </form>

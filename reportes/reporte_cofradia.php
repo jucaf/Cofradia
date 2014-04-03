@@ -4,6 +4,7 @@
 <?php
 	include '../datalogin.php';
 	$did=$_GET['did'];
+	$sql_tramo="";
 	if (isset($_GET['tramo']))
 		$sql_tramo=" AND tramo=".$_GET['tramo']." ";
 	$sql="SELECT Puestos.hid as hid, Hermanos.Nombre as Nombre, Hermanos.Apellidos as Apellidos, Hermanos.NHermano as Antiguedad, Cargos.desc as cargo, Puestos.tramo as tramo, Puestos.pareja as pareja, Puestos.fila as fila, Cargos.cid as cid FROM Puestos INNER JOIN Cargos ON Puestos.cargo=Cargos.cid LEFT JOIN Hermanos ON Puestos.hid=Hermanos.HID INNER JOIN Dias ON Cargos.dia = Dias.did WHERE anno=".date("Y")." AND Cargos.dia=$did $sql_tramo ORDER BY tramo, pareja, cid;";
