@@ -124,7 +124,7 @@ while ($row=mysql_fetch_array($res)){
 		}
 		echo '</SELECT>';	
 		echo '<div id='.$row['did'].'_tramos style="display:none">';
-		$sql="SELECT * FROM Puestos INNER JOIN Cargos ON Puestos.cargo=Cargos.cid WHERE anno=".$_GET['anno']." AND (hid IS NULL OR hid < 1 ) AND dia=".$row['did']." AND ((tramo>0 AND TRAMO <7) OR (TRAMO > 8 AND TRAMO <12))GROUP BY tramo;";
+		$sql="SELECT * FROM Puestos INNER JOIN Cargos ON Puestos.cargo=Cargos.cid WHERE anno=".$_GET['anno']." AND (hid IS NULL OR hid < 1 ) AND dia=".$row['did']." AND ((tramo>0 AND TRAMO <7) OR (TRAMO >= 8 AND TRAMO <11))GROUP BY tramo;";
 		$tramos=mysql_query($sql) or die("<br/><br/>".mysql_error());
 		echo '<SELECT id='.$row['did'].'_tramo onChange="showParejas(this.value,'. $row['did'] . ');" disabled="disabled"><OPTION></OPTION>';
 		while ($tramo=mysql_fetch_array($tramos)){
