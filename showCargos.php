@@ -117,7 +117,7 @@ while ($row=mysql_fetch_array($res)){
 	if (!$num_results){
 		echo '<SELECT id='.$row['did'].'_cargo onChange="showTramos(this.value,'. $row['did'] . ');"><OPTION></OPTION>';
 		while ($cargo=mysql_fetch_array($cargos)){
-			if ($cargo['cid'] == 29 || $cargo['cid'] == 73 || $cargo['cid'] == 76)
+			if ($cargo['cid'] == 29 || $cargo['cid'] == 73 || $cargo['cid'] == 76 || $cargo['cid'] == 80 || $cargo['cid'] == 81|| $cargo['cid'] == 82)
 				echo '<OPTION value=-1>'.$cargo['desc'].'</OPTION>';
 			else
 				echo '<OPTION value='.$cargo['pid'].'>'.$cargo['desc'].'</OPTION>';
@@ -133,7 +133,7 @@ while ($row=mysql_fetch_array($res)){
 		echo '</SELECT>';
 		$tramos=mysql_query($sql) or die("<br/><br/>".mysql_error());
 		while ($tramo=mysql_fetch_array($tramos)){
-			$sql="SELECT * FROM Puestos INNER JOIN Cargos ON Puestos.cargo=Cargos.cid WHERE anno=".$_GET['anno']." AND (hid IS NULL OR hid < 1 ) AND dia=".$row['did']." AND tramo=".$tramo['tramo']." AND ( cargo = 29 OR cargo = 73 OR cargo =76) ORDER BY pareja;";
+			$sql="SELECT * FROM Puestos INNER JOIN Cargos ON Puestos.cargo=Cargos.cid WHERE anno=".$_GET['anno']." AND (hid IS NULL OR hid < 1 ) AND dia=".$row['did']." AND tramo=".$tramo['tramo']." AND ( cargo = 29 OR cargo = 73 OR cargo =76 OR cargo = 80 OR cargo = 81 OR cargo = 82) ORDER BY pareja;";
 			$parejas=mysql_query($sql) or die("<br/><br/>".mysql_error());
 			echo '<SELECT style="display:none" id='.$row['did'].'_'.$tramo['tramo'].' disabled="disabled"><OPTION></OPTION>';
 			while ($pareja=mysql_fetch_array($parejas)){

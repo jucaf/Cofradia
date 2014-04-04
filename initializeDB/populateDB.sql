@@ -1,4 +1,4 @@
-USE cofradia;
+﻿USE cofradia;
 
 INSERT INTO `Dias` VALUE (1,'Domingo de Ramos','17:00');
 INSERT INTO `Dias` VALUE (2,'Viernes Santo','6:00');
@@ -82,6 +82,10 @@ INSERT INTO `Cargos` VALUE (76,2,'Cirio','Virgen',6.00);
 INSERT INTO `Cargos` VALUE (77,1,'Costalero Oracion','Oracion',6.00);
 INSERT INTO `Cargos` VALUE (78,2,'Costalero Señor','Señor',6.00);
 INSERT INTO `Cargos` VALUE (79,2,'Costalero Virgen','Virgen',6.00);
+INSERT INTO `Cargos` VALUE (80,1,'Ultimo Tramo','Oracion',10.00);
+INSERT INTO `Cargos` VALUE (81,2,'Ultimo Tramo Señor','Señor',10.00);
+INSERT INTO `Cargos` VALUE (82,2,'Ultimo Tramo Virgen','Virgen',10.00);
+
 
 -- DOMINGO DE RAMOS
 INSERT INTO Puestos (anno,tramo,fila,pareja,cargo) VALUES (2014,1,'',0,1);
