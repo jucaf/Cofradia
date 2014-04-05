@@ -90,6 +90,7 @@ if ($action == "facturar" || $action == "duplicado"){
 	$pdf->MultiCell(45, 7, $row['orden'], 0, 'L', 0, 0, '50', '107', false, 0, false, true, 0);
 	$pdf->MultiCell(45, 7, $row['antiguedad'], 0, 'L', 0, 0, '50', '117', false, 0, false, true, 0);
 	$pdf->MultiCell(45, 7, $row['precio'], 0, 'L', 0, 0, '50', '129', false, 0, false, true, 0);
+	$pdf->MultiCell(45, 7, date('d-m-Y'), 0, 'L', 0, 0, '50', '138', false, 0, false, true, 0);
 
 	$pdf->MultiCell(90, 0, $row['nombre'], 0, 'L', 0, 0, '122', '23', false, 0, false, true, 0);
 	$pdf->MultiCell(90, 0, $row['apellidos'], 0, 'L', 0, 0, '115', '33', false, 0, false, true, 0);
@@ -102,7 +103,8 @@ if ($action == "facturar" || $action == "duplicado"){
 	$pdf->MultiCell(45, 7, $row['orden'], 0, 'L', 0, 0, '145', '102', false, 0, false, true, 0);
 	$pdf->MultiCell(45, 7, $row['antiguedad'], 0, 'L', 0, 0, '145', '112', false, 0, false, true, 0);
 	$pdf->MultiCell(45, 7, $row['precio'], 0, 'L', 0, 0, '152', '123', false, 0, false, true, 0);
-
+	$pdf->MultiCell(45, 7, date('d-m-Y'), 0, 'L', 0, 0, '145', '138', false, 0, false, true, 0);
+	
 	$pdf->lastPage();
 
 	// This method has several options, check the source code documentation for more information.
