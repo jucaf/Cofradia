@@ -1,6 +1,6 @@
-﻿44USE cofradia;
+﻿USE cofradia;
 
-INSERT INTO `Dias` VALUE (1,'Domingo de Ramos','17:00');
+INSERT INTO `Dias` VALUE (1,'Domingo de Ramos','16:45');
 INSERT INTO `Dias` VALUE (2,'Viernes Santo','6:00');
 
 INSERT INTO `Cargos` VALUE (1,1,'Escolta Cruz de Guia','Oracion',10.00);
