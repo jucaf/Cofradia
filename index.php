@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
 <html>
 	<head>
-		<meta charset="ISO-8859-1">	
+		<meta charset="UTF8">	
 		<script src="jquery-1.9.1.min.js"></script>
 		<script>
 		function buscar(){
